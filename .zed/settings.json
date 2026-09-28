@@ -1,0 +1,28 @@
+{
+  "inlay_hints": {
+    "enabled": true,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true
+  },
+  "lsp": {
+    "rust-analyzer": {
+      "initialization_options": {
+        "check": {
+          "command": "check",
+          "allTargets": true
+        },
+        "cargo": {
+          "allFeatures": true,
+          "buildScripts": {
+            "enable": true
+          }
+        },
+        "procMacro": {
+          "enable": true
+        }
+      }
+    }
+  },
+  "format_on_save": "on"
+}
