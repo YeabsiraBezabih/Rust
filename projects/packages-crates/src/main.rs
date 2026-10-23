@@ -15,3 +15,20 @@
 //     // UNCOMMENTING THE LINE BELOW CAUSES A COMPILE ERROR (field `value` is private):
 //     // println!("Direct private access: {}", cpu_metric.value);
 // }
+
+
+mod database;
+
+use database::Client;
+
+
+fn main() {
+    let mut client = Client::new();
+
+    let result = client.connect();
+
+    match result {
+        Ok(()) => println!("Successfully connected!"),
+        Err(err) => println!("Connection failed: {}", err),
+    }
+}
